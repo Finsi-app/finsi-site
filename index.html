@@ -1,13 +1,396 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
+<!-- RENATO BARROSO - OCT 2022 -->
+<!-- -- ren.dev89@gmail.com -- -->
 
-<head>
-  <title>Finsi Documents</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../styles/main.css" />
-</head>
-<body>
-    <a href="/finsi.github.io/privacy_policies/policies.html"> Politica de Privacidade </a>
-</body>
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <!-- TODO: UPDATE TITLE -->
+    <title>Finsi</title>
+    <style>
+      @font-face {
+        font-family: "TT Norms Pro";
+        src: url("assets/fonts/TT Norms Pro Regular/TT Norms Pro Regular.eot"); /* IE9 Compat Modes */
+        src: url("assets/fonts/TT Norms Pro Regular/TT Norms Pro Regular.eot?#iefix")
+            format("embedded-opentype") /* IE6-IE8 */,
+          url("assets/fonts/TT Norms Pro Regular/TT Norms Pro Regular.woff2")
+            format("woff2") /* Super Modern Browsers */,
+          url("assets/fonts/TT Norms Pro Regular/TT Norms Pro Regular.woff")
+            format("woff") /* Pretty Modern Browsers */,
+          url("assets/fonts/TT Norms Pro Regular/TT Norms Pro Regular.otf")
+            format("opentype") /* Safari, Android, iOS */,
+          url("assets/fonts/TT Norms Pro Regular/TT Norms Pro Regular.ttf")
+            format("truetype") /* Safari, Android, iOS */,
+          url("assets/fonts/TT Norms Pro Regular/TT Norms Pro Regular.svg#TT Norms Pro")
+            format("svg"); /* Legacy iOS */
+      }
+
+      @font-face {
+        font-family: "TT Norms Pro";
+        font-weight: 500;
+        src: url("assets/fonts/TT Norms Pro Medium/TT Norms Pro Medium.eot"); /* IE9 Compat Modes */
+        src: url("assets/fonts/TT Norms Pro Medium/TT Norms Pro Medium.eot?#iefix")
+            format("embedded-opentype") /* IE6-IE8 */,
+          url("assets/fonts/TT Norms Pro Medium/TT Norms Pro Medium.woff2")
+            format("woff2") /* Super Modern Browsers */,
+          url("assets/fonts/TT Norms Pro Medium/TT Norms Pro Medium.woff")
+            format("woff") /* Pretty Modern Browsers */,
+          url("assets/fonts/TT Norms Pro Medium/TT Norms Pro Medium.otf")
+            format("opentype") /* Safari, Android, iOS */,
+          url("assets/fonts/TT Norms Pro Medium/TT Norms Pro Medium.ttf")
+            format("truetype") /* Safari, Android, iOS */,
+          url("assets/fonts/TT Norms Pro Medium/TT Norms Pro Medium.svg#TT Norms Pro Medium")
+            format("svg"); /* Legacy iOS */
+      }
+
+      @font-face {
+        font-family: "TT Norms Pro";
+        font-weight: bold;
+        src: url("assets/fonts/TT Norms Pro Bold/TT Norms Pro Bold.eot"); /* IE9 Compat Modes */
+        src: url("assets/fonts/TT Norms Pro Bold/TT Norms Pro Bold.eot?#iefix")
+            format("embedded-opentype") /* IE6-IE8 */,
+          url("assets/fonts/TT Norms Pro Bold/TT Norms Pro Bold.woff2")
+            format("woff2") /* Super Modern Browsers */,
+          url("assets/fonts/TT Norms Pro Bold/TT Norms Pro Bold.woff")
+            format("woff") /* Pretty Modern Browsers */,
+          url("assets/fonts/TT Norms Pro Bold/TT Norms Pro Bold.otf")
+            format("opentype") /* Safari, Android, iOS */,
+          url("assets/fonts/TT Norms Pro Bold/TT Norms Pro Bold.ttf")
+            format("truetype") /* Safari, Android, iOS */,
+          url("assets/fonts/TT Norms Pro Bold/TT Norms Pro Bold.svg#TT Norms Pro")
+            format("svg"); /* Legacy iOS */
+      }
+
+      @font-face {
+        font-family: "TT Norms Pro";
+        font-weight: 800;
+        src: url("assets/fonts/TT Norms Pro ExtraBold/TT Norms Pro ExtraBold.eot"); /* IE9 Compat Modes */
+        src: url("assets/fonts/TT Norms Pro ExtraBold/TT Norms Pro ExtraBold.eot?#iefix")
+            format("embedded-opentype") /* IE6-IE8 */,
+          url("assets/fonts/TT Norms Pro ExtraBold/TT Norms Pro ExtraBold.woff2")
+            format("woff2") /* Super Modern Browsers */,
+          url("assets/fonts/TT Norms Pro ExtraBold/TT Norms Pro ExtraBold.woff")
+            format("woff") /* Pretty Modern Browsers */,
+          url("assets/fonts/TT Norms Pro ExtraBold/TT Norms Pro ExtraBold.otf")
+            format("opentype") /* Safari, Android, iOS */,
+          url("assets/fonts/TT Norms Pro ExtraBold/TT Norms Pro ExtraBold.ttf")
+            format("truetype") /* Safari, Android, iOS */,
+          url("assets/fonts/TT Norms Pro ExtraBold/TT Norms Pro ExtraBold.svg#TT Norms Pro ExtraBold")
+            format("svg"); /* Legacy iOS */
+      }
+
+      body {
+        font-family: "TT Norms Pro", sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- TODO: UPDATE DESCRIPTIVE META TAGS -->
+    <meta name="description" content="Finsi" />
+    <meta name="author" content="Finsi" />
+    <meta property="og:title" content="Finsi" />
+    <meta property="og:description" content="Finsi" />
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/scripts/slick-1.8.1/slick.css"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- TODO: UPDATE FAVICON -->
+  </head>
+
+  <body>
+    <header>
+      <img src="assets/images/logo-finsi.svg" alt="Finsi logo" class="logo" />
+
+      <nav>
+        <div class="navlink-wrapper">
+          <button type="button" onclick="scrollToID('topics')">Por quê?</button>
+          <div class="selector"></div>
+        </div>
+        <div class="navlink-wrapper">
+          <button type="button" onclick="scrollToID('features')">
+            Recursos
+          </button>
+          <div class="selector"></div>
+        </div>
+        <div class="navlink-wrapper">
+          <button type="button" onclick="scrollToID('posts')">Blog</button>
+          <div class="selector"></div>
+        </div>
+        <a href="/" class="blue" noopener noreferrer>Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="title">
+        <div class="text-container">
+          <h1>
+            <span class="white">Seu App de finanças</span>
+            <br />
+            <span class="blue">Fácil e Prático</span>
+          </h1>
+
+          <p>
+            Uma vida financeira organizada e planejada te dá segurança para
+            saber para onde vai cada centavo.
+          </p>
+
+          <nav class="m-sm">
+            <!-- TODO: STORE PAGES URL -->
+            <a href="/" noopener noreferrer>
+              <img
+                src="assets/images/btn-play-store.webp"
+                alt="Link to Google Play Store"
+              />
+            </a>
+            <a href="/" noopener noreferrer>
+              <img
+                src="assets/images/btn-app-store.webp"
+                alt="Link to Apple App Store"
+              />
+            </a>
+          </nav>
+        </div>
+
+        <div class="img-container">
+          <img
+            id="dots1"
+            src="assets/images/dots.webp"
+            alt="Decorative dots"
+            class="animated"
+          />
+          <img
+            id="dots2"
+            src="assets/images/dots.webp"
+            alt="Decorative dots"
+            class="animated"
+          />
+          <img
+            id="phone"
+            src="assets/images/cellphone1.webp"
+            alt="Finsi app screen"
+          />
+          <img
+            id="coin1"
+            src="assets/images/coin.webp"
+            alt="Decorative coin"
+            class="animated"
+          />
+          <img
+            id="coin2"
+            src="assets/images/coin.webp"
+            alt="Decorative coin"
+            class="animated"
+          />
+        </div>
+      </section>
+
+      <section id="topics" class="animated fadein">
+        <div class="img-container animated from-left">
+          <img src="assets/images/girl1.webp" alt="Girl with phone in hand" />
+        </div>
+
+        <div class="text-container animated from-right">
+          <h2>Controle todos os seus gastos de forma simples</h2>
+
+          <ul>
+            <li>
+              <h3>Conheça o seu orçamento</h3>
+              <p>
+                É fundamental reavaliar suas prioridades de orçamento e
+                identificar as despesas desnecessárias, assim você economiza
+                muito mais.
+              </p>
+            </li>
+            <li>
+              <h3>Sem gráficos é mais prático</h3>
+              <p>
+                Planilhas, post-its, gráficos com dados que você não consegue
+                entender? Agora você pode organizar suas finanças de forma
+                rápida e simples.
+              </p>
+            </li>
+            <li>
+              <h3>Hora de poupar!</h3>
+              <p>
+                Ter uma meta é essencial para alcançar bons resultados, mais
+                importante do que o valor é ter a disciplina para alcançar seu
+                objetivo. Você está pronto para fazer seu dinheiro render mais?
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="img-container-mobile animated from-left">
+          <img src="assets/images/girl1.webp" alt="Girl with phone in hand" />
+        </div>
+      </section>
+
+      <section id="security" class="animated fadein from-bottom">
+        <div class="text-container">
+          <h2>Seus Dados Seguros conosco</h2>
+
+          <p>
+            Nossa prioridade, desde a concepção da empresa, é a preservação dos
+            dados pessoais dos nossos clientes.
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img src="assets/images/cellphone2.webp" alt="Finsi app screen" />
+        </div>
+      </section>
+
+      <section id="features" class="animated fadein from-bottom">
+        <h2>Nossos Recursos</h2>
+
+        <div class="container">
+          <div class="feature-wrapper">
+            <div class="img-wrapper">
+              <img
+                src="assets/images/icon-push-notifications.webp"
+                alt="Icon for push notifications"
+              />
+            </div>
+            <h3>Notificações</h3>
+            <p>
+              Receba Notificações de suas despesas, de seus orçamentos e muito
+              mais.
+            </p>
+          </div>
+
+          <div class="feature-wrapper">
+            <div class="img-wrapper">
+              <img src="assets/images/icon-goal.webp" alt="Icon for goals" />
+            </div>
+            <h3>Orçamentos</h3>
+            <p>Crie seus orçamentos e metas de acordo com a sua necessidade.</p>
+          </div>
+
+          <div class="feature-wrapper">
+            <div class="img-wrapper">
+              <img
+                src="assets/images/icon-categories.webp"
+                alt="Icon for category creation"
+              />
+            </div>
+            <h3>Criação de categorias</h3>
+            <p>
+              Você pode ter várias categorias para organizar melhor seu
+              Dinheiro.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="animated fadein from-right-long">
+        <div id="slider-testimonials"></div>
+      </section>
+
+      <section id="posts" class="animated fadein from-bottom">
+        <h2>Aprenda sobre finanças</h2>
+
+        <div id="slider-posts"></div>
+
+        <div id="posts-controls">
+          <a href="/" noopener noreferrer>Ler todos</a>
+
+          <div id="slider-controls">
+            <button id="btn-prev" type="button"></button>
+            <button id="btn-next" type="button"></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="subscribe" class="animated fadein from-left-long">
+        <div class="text-container">
+          <h2>
+            Receba dicas mensais sobre dinheiro e fique por dentro de suas
+            finanças
+          </h2>
+
+          <div class="input-container">
+            <!-- TODO: INSERT FROM SUBMISSION URL -->
+            <form action="/" method="POST">
+              <input
+                name="email"
+                type="email"
+                aria-label="email"
+                placeholder="Digite seu e-mail"
+                required
+              />
+              <input
+                hidden
+                name="message"
+                type="text"
+                value="solicitacao-newsletter"
+              />
+              <button type="submit">Se inscrever</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="img-container">
+          <img src="assets/images/girl2.webp" alt="Girl looking at phone" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="assets/images/logo-finsi.svg" alt="Finsi logo" class="logo" />
+
+      <nav>
+        <div class="navlink-wrapper">
+          <button type="button" onclick="scrollToID('topics')">Por quê?</button>
+          <div class="selector"></div>
+        </div>
+        <div class="navlink-wrapper">
+          <button type="button" onclick="scrollToID('features')">
+            Recursos
+          </button>
+          <div class="selector"></div>
+        </div>
+        <div class="navlink-wrapper">
+          <button type="button" onclick="scrollToID('posts')">Blog</button>
+          <div class="selector"></div>
+        </div>
+      </nav>
+
+      <nav class="m-sm">
+        <!-- TODO: STORE PAGES URL -->
+        <a href="/" noopener noreferrer>
+          <img
+            src="assets/images/btn-play-store.webp"
+            alt="Link to Google Play Store"
+          />
+        </a>
+        <a href="/" noopener noreferrer>
+          <img
+            src="assets/images/btn-app-store.webp"
+            alt="Link to Apple App Store"
+          />
+        </a>
+      </nav>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/scripts/slick-1.8.1/slick.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/scripts/scripts.js"></script>
+  </body>
 </html>
