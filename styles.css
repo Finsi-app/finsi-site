@@ -13,6 +13,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -334,6 +338,38 @@ ul.slick-dots li:not(:last-child) {
   #title nav {
     justify-content: center;
   }
+
+  #title > div.img-container img#coin1 {
+    transform: translate(-210%, -1050%);
+  }
+
+  #title.onscreen > div.img-container img#coin1 {
+    transform: translate(-240%, -1050%);
+  }
+
+  #title > div.img-container img#coin2 {
+    transform: translate(100%, -250%) scale(0.8);
+  }
+
+  #title.onscreen > div.img-container img#coin2 {
+    transform: translate(130%, -250%) scale(0.8);
+  }
+
+  #title > div.img-container img#dots1 {
+    transform: translate(-235%, -450%);
+  }
+
+  #title.onscreen > div.img-container img#dots1 {
+    transform: translate(-183%, -450%);
+  }
+
+  #title > div.img-container img#dots2 {
+    transform: translate(70%, -800%);
+  }
+
+  #title.onscreen > div.img-container img#dots2 {
+    transform: translate(105%, -800%);
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -349,6 +385,38 @@ ul.slick-dots li:not(:last-child) {
 @media only screen and (max-width: 400px) {
   #title span {
     font-size: 56px;
+  }
+
+  #title > div.img-container img#coin1 {
+    transform: translate(-150%, -750%) scale(0.8);
+  }
+
+  #title.onscreen > div.img-container img#coin1 {
+    transform: translate(-180%, -750%) scale(0.8);
+  }
+
+  #title > div.img-container img#coin2 {
+    transform: translate(50%, -180%) scale(0.6);
+  }
+
+  #title.onscreen > div.img-container img#coin2 {
+    transform: translate(80%, -180%) scale(0.6);
+  }
+
+  #title > div.img-container img#dots1 {
+    transform: translate(-205%, -350%) scale(0.8);
+  }
+
+  #title.onscreen > div.img-container img#dots1 {
+    transform: translate(-153%, -350%) scale(0.8);
+  }
+
+  #title > div.img-container img#dots2 {
+    transform: translate(70%, -550%) scale(0.8);
+  }
+
+  #title.onscreen > div.img-container img#dots2 {
+    transform: translate(105%, -550%) scale(0.8);
   }
 }
 
@@ -734,6 +802,7 @@ ul.slick-dots li:not(:last-child) {
 }
 
 #testimonials div.testimonial-pic {
+  background-size: cover !important;
   border: 3px solid var(--cyan);
   border-radius: 50%;
   width: 150px;

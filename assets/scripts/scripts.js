@@ -181,6 +181,14 @@ const testAnimations = (e) => {
   div[0].classList.toggle("onscreen");
 };
 
+const isScreenMedium = () => {
+  return window.innerWidth <= 900;
+};
+
+const isScreenSmall = () => {
+  return window.innerWidth <= 500;
+};
+
 const getFOV = (e) => {
   // Returns the current user field of view
   // Represents the maximum y coord the user can see on screen
@@ -190,9 +198,19 @@ const getFOV = (e) => {
 
 const getSectionActivationPoint = (sectionEl) => {
   // Returns the y threshold the scroll must cross to activate the section
-  // Currently set to 65% of the section height
+  // Currently set to 65% of the section height for large screens
+  // 40% for medium screens, or 20% for small screens
 
-  return sectionEl.offsetTop + sectionEl.offsetHeight * 0.65;
+  let percent;
+  if (isScreenSmall()) {
+    percent = $(sectionEl).data("threshold-small") || 20;
+  } else if (isScreenMedium()) {
+    percent = $(sectionEl).data("threshold-medium") || 40;
+  } else {
+    percent = $(sectionEl).data("threshold-large") || 65;
+  }
+
+  return sectionEl.offsetTop + sectionEl.offsetHeight * (percent / 100);
 };
 
 const scrollCallback = (e) => {
